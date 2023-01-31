@@ -1,20 +1,11 @@
-.htaccess
-/config.php
-admin/config.php
 
-!index.html
-
-download/
-image/data/
-image/cache/
-system/cache/
-system/logs/
-
-system/storage/
-
-# vQmod log files
-vqmod/logs/*
-# vQmod cache files
-vqmod/vqcache/*
-vqmod/checked.cache
-vqmod/mods.cache
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = altlokalt
+	email = altlokalt@gmail.com
+[credential]
+	useHttpPath = true
